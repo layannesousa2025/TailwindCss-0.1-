@@ -18,7 +18,7 @@ A proposta é evoluir o conhecimento em estilização front-end sem depender de 
 ## 🛠️ Tecnologias Utilizadas
 - HTML5  
 - Tailwind CSS  
-- Visual Studio Code  
+- Antigravity
 
 ---
 
@@ -69,6 +69,7 @@ Design adaptável a diferentes telas:
 <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2">
   Hover
 </button>
+
 📁 Estrutura do Projeto
 📦 aprendendo-tailwind
  ┣ 📂 src
@@ -90,6 +91,7 @@ Depois, adicione no seu CSS:
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 💡 Melhorias Futuras
  Criar layout completo (landing page)
  Implementar Grid
