@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-slate-50 font-sans text-slate-900 antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold">A</span>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Aula 18</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Início</a>
+                    <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Sobre</a>
+                    
+                    <!-- Dropdown Component -->
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-slate-600 hover:text-blue-600 transition-colors font-medium focus:outline-none">
+                            Recursos
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="absolute right-0 mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-200">
+                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600">Documentação</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600">Tutoriais</a>
+                            <hr class="my-1 border-slate-100">
+                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600">Suporte VIP</a>
+                        </div>
+                    </div>
+
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-semibold shadow-lg shadow-blue-200 transition-all hover:scale-105 active:scale-95">
+                        Começar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Dominando o <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tailwind CSS</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Aprenda a criar interfaces modernas, rápidas e visualmente impactantes usando o framework CSS utilitário mais popular do mundo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl hover:bg-slate-800 transition-all hover:-translate-y-1">
+                    Ver Componentes
+                </a>
+                <a href="#" class="bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all hover:border-slate-300">
+                    Acessar Curso
+                </a>
+            </div>
+        </div>
+        
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-[100px]"></div>
+        </div>
+    </header>
+
+    <!-- Feature Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 border-b-4 border-blue-600 inline-block pb-2">O que você vai aprender</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 border-b-4 border-b-blue-500">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Layouts Flexíveis</h3>
+                    <p class="text-slate-600 leading-relaxed">Domine Flexbox e Grid para construir layouts complexos que se adaptam a qualquer tela sem esforço.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-indigo-100 transition-all duration-300 border-b-4 border-b-indigo-500">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Componentes UI</h3>
+                    <p class="text-slate-600 leading-relaxed">Crie botões, modais, dropdowns e formulários totalmente customizados e acessíveis.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-cyan-100 transition-all duration-300 border-b-4 border-b-cyan-500">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Estilização Avançada</h3>
+                    <p class="text-slate-600 leading-relaxed">Explore animações, gradientes, filtros e o modo escuro nativo do Tailwind CSS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 Aula 18 - Aprendendo Tailwind CSS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
